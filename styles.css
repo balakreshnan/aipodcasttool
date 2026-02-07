@@ -184,6 +184,11 @@ body {
   font-size: 0.8rem;
 }
 
+.badge.live {
+  background: rgba(255, 77, 124, 0.15);
+  color: #ff4d7c;
+}
+
 .panel-grid {
   display: grid;
   gap: 16px;
@@ -240,6 +245,34 @@ body {
   flex-wrap: wrap;
 }
 
+.recording-preview {
+  display: grid;
+  gap: 16px;
+  margin: 20px 0;
+  background: rgba(10, 12, 22, 0.75);
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.recording-preview video {
+  width: 100%;
+  border-radius: 16px;
+  background: #0b0d19;
+  min-height: 180px;
+  object-fit: cover;
+}
+
+.recording-status p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.recording-status .recording-hint {
+  font-size: 0.8rem;
+}
+
 .meter {
   display: flex;
   gap: 6px;
@@ -274,6 +307,11 @@ body {
 .control {
   background: rgba(255, 255, 255, 0.08);
   font-size: 0.85rem;
+}
+
+.control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .control.primary {
@@ -436,6 +474,13 @@ body {
 .publish-card p {
   color: var(--muted);
   margin-top: 12px;
+}
+
+.publish-note {
+  width: 100%;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 16px;
 }
 
 .publish-actions {

@@ -43,7 +43,9 @@
               workflow.
             </p>
             <div class="hero-actions">
-              <button class="primary-button">Start a recording</button>
+              <button class="primary-button" id="heroStartRecording">
+                Start a recording
+              </button>
               <button class="secondary-button">Watch product tour</button>
             </div>
             <div class="hero-stats">
@@ -64,7 +66,7 @@
           <div class="hero-panel">
             <div class="panel-header">
               <h2>Live Recording Room</h2>
-              <span class="badge">Recording</span>
+              <span class="badge" id="recordingBadge">Idle</span>
             </div>
             <div class="panel-grid">
               <div class="participant">
@@ -80,6 +82,15 @@
                   <h3>Jordan (Guest)</h3>
                   <p>Mic: On · Camera: 4K</p>
                 </div>
+              </div>
+            </div>
+            <div class="recording-preview">
+              <video id="livePreview" autoplay muted playsinline></video>
+              <div class="recording-status">
+                <p id="recordingStatus">Camera and microphone are off.</p>
+                <p class="recording-hint">
+                  Start a recording to capture both audio and video in-browser.
+                </p>
               </div>
             </div>
             <div class="timeline">
@@ -98,9 +109,15 @@
                 <span></span>
               </div>
               <div class="controls">
-                <button class="control">Mute</button>
-                <button class="control">Share</button>
-                <button class="control primary">End & Save</button>
+                <button class="control" id="muteButton">Mute</button>
+                <button class="control" id="shareButton">Share</button>
+                <button class="control" id="startRecording">Start recording</button>
+                <button class="control" id="stopRecording" disabled>
+                  Stop recording
+                </button>
+                <button class="control primary" id="downloadRecording" disabled>
+                  Download
+                </button>
               </div>
             </div>
           </div>
@@ -237,9 +254,15 @@
               </p>
             </div>
             <div class="publish-actions">
-              <button class="primary-button">Connect YouTube</button>
+              <button class="primary-button" id="connectYoutube">
+                Connect YouTube
+              </button>
               <button class="ghost-button">View sample upload</button>
             </div>
+            <p class="publish-note" id="youtubeStatus">
+              Connect your channel to enable uploads. A demo OAuth flow will open
+              in a new tab.
+            </p>
           </div>
         </section>
       </main>
